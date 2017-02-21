@@ -14,7 +14,7 @@ class OffersController < ApplicationController
   def create
     @offer = Offer.new(task_params)
     @offer.save
-    redirect_to dashboard_index_path
+    redirect_to user_offers_path
   end
 
   def edit
@@ -24,13 +24,13 @@ class OffersController < ApplicationController
   def update
     @offer = Offer.find(params[:id])
     @offer.update(task_params)
-    redirect_to dashboard_index_path
+    redirect_to user_offers_path
   end
 
   def destroy
     @offer = Offer.find(params[:id])
     @offer.destroy
-    redirect_to dashboard_index_path
+    redirect_to user_offers_path
   end
 
   private
