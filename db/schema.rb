@@ -10,10 +10,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170220134657) do
+ActiveRecord::Schema.define(version: 20170221105328) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "offers", force: :cascade do |t|
+    t.integer  "users_id"
+    t.string   "name"
+    t.string   "city"
+    t.string   "price"
+    t.string   "address"
+    t.string   "zip_code"
+    t.string   "video"
+    t.text     "description"
+    t.integer  "room_number"
+    t.integer  "surface"
+    t.string   "type"
+    t.integer  "bedroom_number"
+    t.boolean  "parking"
+    t.string   "pictures"
+    t.boolean  "ground"
+    t.boolean  "garden"
+    t.boolean  "lift"
+    t.boolean  "floor"
+    t.boolean  "swimming_pool"
+    t.boolean  "cave"
+    t.boolean  "balcony"
+    t.boolean  "terrace"
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.integer  "price_cents",    default: 0, null: false
+    t.index ["users_id"], name: "index_offers_on_users_id", using: :btree
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -28,8 +57,21 @@ ActiveRecord::Schema.define(version: 20170220134657) do
     t.inet     "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "address"
+    t.string   "city"
+    t.string   "zip_code"
+    t.string   "phone_number"
+    t.string   "cell_number"
+    t.string   "company_name"
+    t.string   "company_description"
+    t.string   "company_logo"
+    t.string   "company_pictures"
+    t.string   "siret"
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "offers", "users", column: "users_id"
 end
