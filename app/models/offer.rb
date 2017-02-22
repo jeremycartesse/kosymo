@@ -1,9 +1,8 @@
 class Offer < ApplicationRecord
 
-  belongs_to :user_id
   geocoded_by :address
   after_validation :geocode, if: :address_changed?
-  
+
   ROOM_NUMBER = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
   BEDROOM_NUMBER = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
   GOOD_TYPE = ["Appartment", "Floor", "House", "Building", "Commercial premises", "Parking"]
