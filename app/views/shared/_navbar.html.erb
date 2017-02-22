@@ -1,6 +1,7 @@
 <div class="navbar-wagon">
+
   <!-- Logo -->
-  <%= link_to root_path, class: "navbar-wagon-brand" do %>
+  <%= link_to root_path, class: "navbar-wagon-brand img-responsive" do %>
     <%= image_tag "logo.png" %>
   <% end %>
 
@@ -11,9 +12,12 @@
     <form action="" class="navbar-wagon-search">
       <input type="text" class="navbar-wagon-search-input" placeholder="Search something">
       <button type="submit" class="navbar-wagon-search-btn">
-        <i class="fa fa-search"></i>
+        <i class="fa fa-search" style="position: relative; top: -12px;"></i>
       </button>
     </form>
+
+
+
 
     <!-- Different navigation if login or not -->
     <% if user_signed_in? %>
@@ -58,7 +62,7 @@
     <% end %>
 
     <!-- Button (call-to-action) -->
-    <%= link_to t(".top_call_to_action", default: "Post stuff"), "#", class: "navbar-wagon-item navbar-wagon-button btn" %>
+
   </div>
 
   <!-- Dropdown list appearing on mobile only -->
@@ -72,5 +76,6 @@
       </ul>
     </div>
   </div>
-</div>
+  <p class="container"></p>
 
+  </div>
