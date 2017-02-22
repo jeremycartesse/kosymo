@@ -35,6 +35,18 @@
 
 }
 
+.punchline{
+  display: fixed !important;
+  font-family: Quicksand;
+  color: lightgrey;
+
+  position: absolute; top: 65px; left: 135px;
+
+  z-index: 10;
+  @media (max-width: 600px) {
+    color: transparent;
+}
+}
 /* Navbar right section (with form, links, button) */
 .navbar-wagon-right {
   display: flex;
