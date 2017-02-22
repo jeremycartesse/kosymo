@@ -8,7 +8,7 @@
   <div class="navbar-wagon-right hidden-xs hidden-sm">
     <!-- Search form -->
 
-    
+
 
     <form action="" class="navbar-wagon-search" style="position: relative; top: 50px; left:-250px;">
       <input type="text" class="navbar-wagon-search-input" placeholder="">
@@ -20,7 +20,7 @@
     <!-- Different navigation if login or not -->
     <% if user_signed_in? %>
 
-       
+
 
       <!-- Notification -->
       <%= link_to "#", class: "navbar-wagon-item navbar-wagon-link" do %>
@@ -65,7 +65,7 @@
     </div>
     <% else %>
     <!-- Login text link -->
-    <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
     <% end %>
     <!-- Button (call-to-action) -->
   </div>
@@ -79,5 +79,5 @@
         <li><a href="#">Other one</a></li>
       </ul>
     </div>
-
+  </div>
 </div>
