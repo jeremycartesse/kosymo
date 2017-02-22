@@ -1,7 +1,7 @@
 class CreateOffers < ActiveRecord::Migration[5.0]
   def change
     create_table :offers do |t|
-      t.references :users, foreign_key: true
+      t.references :user, foreign_key: true
       t.string :name
       t.string :city
       t.string :price
@@ -11,7 +11,7 @@ class CreateOffers < ActiveRecord::Migration[5.0]
       t.text :description
       t.integer :room_number
       t.integer :surface
-      t.string :type
+      t.string :good_type
       t.integer :bedroom_number
       t.boolean :parking
       t.string :pictures

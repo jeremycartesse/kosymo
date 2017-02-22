@@ -1,27 +1,32 @@
 <h1>Offers#new</h1>
 <p>Find me in app/views/offers/new.html.erb</p>
-
-
-<%= simple_form_for [@offer] do |f| %>
-  <%= f.input :name %>
-  <%= f.input :city %>
-  <%= f.input :price %>
-  <%= f.input :address %>
-  <%= f.input :zip_code %>
-  <%= f.input :video %>
-  <%= f.input :description %>
-  <%= f.input :room_number %>
-  <%= f.input :bedroom_number %>
-  <%= f.input :type %>
-  <%= f.input :parking %>
-  <%= f.input :pictures %>
-  <%= f.input :ground %>
-  <%= f.input :lift %>
-  <%= f.input :floor %>
-  <%= f.input :swimming_pool %>
-  <%= f.input :cave %>
-  <%= f.input :balcony %>
-  <%= f.input :terrace %>
-
-  <%= f.submit "add a offer", class: "btn btn-primary" %>
-<% end %>
+<div class="container">
+  <div class="row">
+    <%= simple_form_for [@offer] do |f| %>
+    <%= f.input :name %>
+    <%= f.input :city %>
+    <%= f.input :price %>
+    <%= f.input :address %>
+    <%= f.input :zip_code %>
+    <%= f.input :video %>
+    <%= f.input :description %>
+    <%= f.label :room_number %>
+    <%= f.select :room_number, Offer::ROOM_NUMBER %>
+    <%= f.label :bedroom_number %>
+    <%= f.select :bedroom_number, Offer::BEDROOM_NUMBER %>
+    <%= f.label :good_type %>
+    <%= f.select :good_type, Offer::GOOD_TYPE %>
+    <ul>
+      <li><%= f.input :parking %></li>
+      <li><%= f.input :ground %></li>
+      <li><%= f.input :lift %></li>
+      <li><%= f.input :floor %></li>
+      <li><%= f.input :swimming_pool %></li>
+      <li><%= f.input :cave %></li>
+      <li><%= f.input :balcony %></li>
+      <li><%= f.input :terrace %></li>
+    </ul>
+    <%= f.submit "add a offer", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

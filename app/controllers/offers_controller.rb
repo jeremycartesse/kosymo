@@ -44,7 +44,7 @@ class OffersController < ApplicationController
   private
 
   def task_params
-    params.require(:offer).permit(:name, :address, :city, :zip_code, :price, :description, :room_number, :surface, :type)
+    params.require(:offer).permit(:name, :city, :price, :address, :zip_code, :video, :description, :room_number, :bedroom_number, :surface, :good_type, :parking, :pictures, :ground, :lift, :garden, :floor, :swimming_pool, :cave, :balcony, :terraceo )
   end
 
 end

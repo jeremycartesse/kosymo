@@ -1,0 +1,10 @@
+
+<h2>My list of offers</h2>
+
+<% @offers.each do |offer| %>
+  <h2> <%= offer.name %></h2>
+  <h2> <%= offer.description %></h2>
+  <h2> <%= offer.price %></h2>
+  <h2> <%= offer.address %></h2>
+  <h2> <%= offer.zip_code %></h2>
+<% end %>
