@@ -18,6 +18,14 @@ gem 'simple_form'
 gem 'autoprefixer-rails'
 gem 'money-rails', '~>1'
 
+gem 'carrierwave', '~> 0.11.2'
+
+gem 'attachinary', git: 'https://github.com/assembler/attachinary.git'
+
+gem 'cloudinary', '1.1.7'
+gem 'jquery-fileupload-rails'
+gem 'coffee-rails'
+
 group :development, :test do
   gem 'binding_of_caller'
   gem 'better_errors'

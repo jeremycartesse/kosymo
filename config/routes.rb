@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  mount Attachinary::Engine => "/attachinary"
   resources :offers
   devise_for :users
   resources :users, only: [] do
