@@ -8,6 +8,9 @@ gem 'figaro'
 gem 'jbuilder', '~> 2.0'
 gem 'devise'
 gem 'redis'
+gem "geocoder"
+gem "coffee-rails"
+gem "gmaps4rails"
 
 gem 'sass-rails'
 gem 'jquery-rails'
@@ -17,6 +20,9 @@ gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'autoprefixer-rails'
 gem 'money-rails', '~>1'
+source 'https://rails-assets.org' do
+  gem "rails-assets-underscore"
+end
 
 group :development, :test do
   gem 'binding_of_caller'

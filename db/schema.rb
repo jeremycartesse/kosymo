@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170221105328) do
+ActiveRecord::Schema.define(version: 20170222133320) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "offers", force: :cascade do |t|
-    t.integer  "users_id"
+    t.integer  "user_id"
     t.string   "name"
     t.string   "city"
     t.string   "price"
@@ -41,7 +41,11 @@ ActiveRecord::Schema.define(version: 20170221105328) do
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
     t.integer  "price_cents",    default: 0, null: false
+
+    t.float    "latitude"
+    t.float    "longitude"
     t.index ["users_id"], name: "index_offers_on_users_id", using: :btree
+
   end
 
   create_table "users", force: :cascade do |t|
@@ -73,5 +77,5 @@ ActiveRecord::Schema.define(version: 20170221105328) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
-  add_foreign_key "offers", "users", column: "users_id"
+  add_foreign_key "offers", "users"
 end
