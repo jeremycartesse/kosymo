@@ -1,10 +1,18 @@
 class OffersController < ApplicationController
+
   def index
-    @offers = Offer.all
+    @offers = Offer.where.not(latitude: nil, longitude: nil)
+
+    @hash = Gmaps4rails.build_markers(@offers) do |offer, marker|
+      marker.lat offer.latitude
+      marker.lng offer.longitude
+      # marker.infowindow render_to_string(partial: "/flats/map_box", locals: { flat: flat })
+    end
   end
 
   def show
     @offer = Offer.find(params[:id])
+    @offer_coordinates = { lat: @offer.latitude, lng: @offer.longitude }
   end
 
   def new
@@ -14,7 +22,7 @@ class OffersController < ApplicationController
   def create
     @offer = Offer.new(task_params)
     @offer.save
-    redirect_to user_offers_path
+    redirect_to user_offers_path(user_id: current_user)
   end
 
   def edit
