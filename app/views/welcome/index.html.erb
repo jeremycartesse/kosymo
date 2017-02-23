@@ -1,4 +1,4 @@
-<ul class= "welcomenu" style="display: flex; justify-content: space-around; margin-bottom: 40px;">
+<ul class= "welcomenu" style="display: flex; justify-content: space-around; margin-bottom: 40px;font-family:Quicksand;font-size: 20px;">
 <li style="list-style-type: none;"><%= link_to root_path, :style => "text-decoration: none; color:black;" do %>Immobiler<%end%>
 </li>
 <li style="list-style-type: none;"><%= link_to root_path, :style => "text-decoration: none; color:black;" do %>Professionnels<%end%>
@@ -12,9 +12,19 @@
 <div>
 <p class="punchline text-center" style="display: inline; width: 100%;
     float: left; font-family: Quicksand; font-weight: lighter!important;font-size: 70px;
-  color: white; : relative; top: 48vh ;left:0%;">Concrétisez votre rêve immobilier</p>
+
+  color: white; : relative; top: 40vh;left:0%;">Concrétisez votre rêve immobilier</p>
 </div>
-<div class="video-container">
+<div class="video-container" style="">
     <video preload="auto" autoplay="true" loop="loop" id="video-background" width="100%" >
     <source src= "<%= image_path("home_web.mp4")%>" type="video/mp4">
 </video>
+</div>
+
+<div style="display: flex; justify-content: space-around;">
+<% 4.times do |i|%>
+<%= render "shared/card", indice: i %>
+<%end%>
+</div>
+
+

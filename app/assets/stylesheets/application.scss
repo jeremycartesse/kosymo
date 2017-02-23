@@ -3,10 +3,13 @@
 @import "config/bootstrap_variables";
 
 // External libraries
+@import "components/address_autocomplete";
+@import "jquery-ui/autocomplete";
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+
 
 // Your CSS
 @import "layout/index";
@@ -21,14 +24,15 @@
   position: relative;top:-8px;left: -10px;
   color: #e60000;
   border: none;
-  background: transparent
+  background: transparent;
 }
 .video-container {
 
   position: relative;
-  min-height: 100%;
   overflow: hidden;
   width: 100%;
+  height: 43vh;
+  min-height: 30vh !important;
   top: 0%;
   z-index: 0;
   left: 0%;
@@ -37,11 +41,10 @@
     opacity: 0.78;
     z-index: 0;
     min-width: 100% !important;
-    height: auto;
   }
   video {
     position: relative;
-    top: 50%;
+    // top: 50%;
     left: 0;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
@@ -81,7 +84,17 @@ font-family: Quicksand;
 }
 
 
-//jeremy add for the dashboard
+.pictolist{
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+}
+
+.avatarcard{
+  width: 50px;
+  border-radius: 50%;
+}
 .media {
   display: flex;
 }
@@ -108,6 +121,7 @@ font-family: Quicksand;
 .media-section:last-child {
   margin-bottom: 0;
 }
+
 
 .bouton_nom {
   font-family: Quicksand;
@@ -146,4 +160,8 @@ font-family: Quicksand;
   box-shadow: none;
   background: transparent;
   color: #e60000;
+
+.input_count {
+  column-count: 4;
+
 }
