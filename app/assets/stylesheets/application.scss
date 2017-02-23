@@ -121,6 +121,47 @@ font-family: Quicksand;
 .media-section:last-child {
   margin-bottom: 0;
 }
+
+
+.bouton_nom {
+  font-family: Quicksand;
+  font-size: 20px;
+  position: relative;top:-8px;left: -10px;
+  color: #e60000;
+  border: none;
+  background: transparent
+}
+.bouton_nom:hover {
+font-family: Quicksand;
+  font-size: 20px;
+  position: relative;top:-8px;
+  color: grey;
+  border: none;
+  background: transparent
+}
+
+.bouton_nom:focus {
+  outline:0;
+  border:none;
+  background: transparent
+
+}
+.bouton_nom:active {
+  outline:0;
+  border:none;
+  box-shadow: none;
+  background: transparent;
+  color: #e60000;
+
+}
+.bouton_nom:active:focus {
+  outline:0;
+  border:none;
+  box-shadow: none;
+  background: transparent;
+  color: #e60000;
+
 .input_count {
   column-count: 4;
+
 }
