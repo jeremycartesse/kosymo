@@ -1,6 +1,7 @@
-<div class="container" style="display: block; width: 350px; border: 1px solid lightgrey; margin-top: 20px;">
-    <div class="card">
+<div class="container" style="display: flex; justify-content: space-around; width: 17%; border: 1px solid lightgrey; margin-top: 20px;">
+    <div>
       <div class="card-background text-center" style="margin-top: 30px;">
+
         <div class="videohover-background">
           <video preload="auto" loop="loop" width="100%" onmouseout="this.pause()" onmouseover="this.play()">
             <source src= "<%= image_path("off#{indice + 1}.mp4")%>" type="video/mp4">
@@ -11,6 +12,7 @@
       <div class="card-footer" style="margin-top: 10px; margin-bottom: 20px;" >
       <div style="float:left; position: relative;top:7px; left: 20px;">
         <%= image_tag "avatar.jpg", class: "avatarcard", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+
       </div>
 
       <div style="float:middle">

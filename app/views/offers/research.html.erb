@@ -1,22 +1,13 @@
 <ul class= "welcomenu" style="display: flex; justify-content: space-around; margin-bottom: 40px;">
-  <li style="list-style-type: none;"><%= link_to new_offer_path, :style => "text-decoration: none; color:black;" do %>Créer une annonce<%end%>
+  <li style="list-style-type: none;"><%= link_to root_path, :style => "text-decoration: none; color:black;" do %>Immobiler<%end%>
   </li>
-  <li style="list-style-type: none;"><%= link_to root_path, :style => "text-decoration: none; color:black;" do %>Mes annonces<%end%>
+  <li style="list-style-type: none;"><%= link_to root_path, :style => "text-decoration: none; color:black;" do %>Professionnels<%end%>
   </li>
-  <li style="list-style-type: none;"><%= link_to root_path, :style => "text-decoration: none; color:black;" do %>Boîte de réception<%end%>
+  <li style="list-style-type: none;"><%= link_to root_path, :style => "text-decoration: none; color:black;" do %>Déco shops<%end%>
   </li>
   <li style="list-style-type: none;"><%= link_to root_path, :style => "text-decoration: none; color:black;" do %>Projets<%end%>
   </li>
 </ul>
-<!-- il faut designer la partie bleue -->
-<div class="card" style="background-color: #9BBAC9">
-  <div class="card-category ">edit </div>
-  <div class="card-description">
-    <h2>Welcome to your dashboard</h2>
-  </div>
-  <a class="card-link" href="#" ></a>
-</div>
-
 <% @offers.each do |offer| %>
 <div class="container" style>
   <div class="row">
@@ -65,5 +56,5 @@
       </div>
     </div>
   </div>
+  <% end %>
 </div>
-<% end %>
