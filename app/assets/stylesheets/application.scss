@@ -3,10 +3,13 @@
 @import "config/bootstrap_variables";
 
 // External libraries
+@import "components/address_autocomplete";
+@import "jquery-ui/autocomplete";
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+
 
 // Your CSS
 @import "layout/index";
@@ -22,6 +25,31 @@
   color: #e60000;
   border: none;
   background: transparent;
+}
+.video-container {
+
+  position: relative;
+  min-height: 100%;
+  overflow: hidden;
+  width: 100%;
+  top: 0%;
+  z-index: 0;
+  left: 0%;
+  .video-background {
+    position: relative;
+    opacity: 0.78;
+    z-index: 0;
+    min-width: 100% !important;
+    height: auto;
+  }
+  video {
+    position: relative;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
 }
 
 .action:hover {
@@ -55,6 +83,7 @@ font-family: Quicksand;
   color: #e60000;
 }
 
+
 .pictolist{
   margin: auto;
   display: flex;
@@ -65,4 +94,30 @@ font-family: Quicksand;
 .avatarcard{
   width: 50px;
   border-radius: 50%;
+}
+.media {
+  display: flex;
+}
+.media-body {
+  flex: 1 1 auto;
+  padding: 20px;
+}
+.media-body img {
+  width: 100%;
+}
+.media-aside {
+  flex: 0 0 400px;
+  padding: 30px;
+  align-self: stretch;
+  background: #F8F7F7;
+  border-left: 1px solid #f0efef;
+}
+.media-section {
+  margin: 40px auto;
+}
+.media-section:first-child {
+  margin-top: 0;
+}
+.media-section:last-child {
+  margin-bottom: 0;
 }
