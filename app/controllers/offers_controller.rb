@@ -20,7 +20,7 @@ class OffersController < ApplicationController
   end
 
   def create
-    @offer = Offer.new(task_params)
+    @offer = Offer.new(offer_params)
     @offer.user_id = current_user.id
     if @offer.save
       redirect_to user_offers_path(user_id: current_user)
@@ -35,7 +35,7 @@ class OffersController < ApplicationController
 
   def update
     @offer = Offer.find(params[:id])
-    @offer.update(task_params)
+    @offer.update(offer_params)
     redirect_to user_offers_path
   end
 
@@ -47,8 +47,8 @@ class OffersController < ApplicationController
 
   private
 
-  def task_params
-    params.require(:offer).permit(:name, :city, :price, :address, :zip_code, :video, :description, :room_number, :bedroom_number, :surface, :good_type, :parking, :pictures, :ground, :lift, :garden, :floor, :swimming_pool, :cave, :balcony, :terraceo )
+  def offer_params
+    params.require(:offer).permit(:name, :city, :price, :address, :zip_code, :video, :description, :room_number, :bedroom_number, :surface, :good_type, :parking, :ground, :lift, :garden, :floor, :swimming_pool, :cave, :balcony, :terraceo, photos: [] )
   end
 
 end
