@@ -23,6 +23,31 @@
   border: none;
   background: transparent
 }
+.video-container {
+
+  position: relative;
+  min-height: 100%;
+  overflow: hidden;
+  width: 100%;
+  top: 0%;
+  z-index: 0;
+  left: 0%;
+  .video-background {
+    position: relative;
+    opacity: 0.78;
+    z-index: 0;
+    min-width: 100% !important;
+    height: auto;
+  }
+  video {
+    position: relative;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+}
 
 .action:hover {
 font-family: Quicksand;
