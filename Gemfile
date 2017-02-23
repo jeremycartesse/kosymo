@@ -11,7 +11,8 @@ gem 'redis'
 gem "geocoder"
 gem "coffee-rails"
 gem "gmaps4rails"
-
+gem 'gmaps-autocomplete-rails'
+gem 'jquery-ui-rails'
 gem 'sass-rails'
 gem 'jquery-rails'
 gem 'uglifier'
