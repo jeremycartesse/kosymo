@@ -47,6 +47,9 @@ class OffersController < ApplicationController
       render :new
     end
   end
+  def research
+    @offers = Offer.all
+  end
 
   private
 
