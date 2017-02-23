@@ -21,7 +21,7 @@
   position: relative;top:-8px;left: -10px;
   color: #e60000;
   border: none;
-  background: transparent
+  background: transparent;
 }
 
 .action:hover {
@@ -53,4 +53,16 @@ font-family: Quicksand;
   box-shadow: none;
   background: transparent;
   color: #e60000;
+}
+
+.pictolist{
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+}
+
+.avatarcard{
+  width: 50px;
+  border-radius: 50%;
 }
