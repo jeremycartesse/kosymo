@@ -15,16 +15,16 @@
 @import "vendor/index";
 
 
-.btn-action {
+.action {
   font-family: Quicksand;
   font-size: 20px;
-  position: relative;top:-8px;
+  position: relative;top:-8px;left: -10px;
   color: #e60000;
   border: none;
   background: transparent
 }
 
-.btn-action:hover {
+.action:hover {
 font-family: Quicksand;
   font-size: 20px;
   position: relative;top:-8px;
@@ -33,3 +33,24 @@ font-family: Quicksand;
   background: transparent
 }
 
+.action:focus {
+  outline:0;
+  border:none;
+  background: transparent
+
+}
+.action:active {
+  outline:0;
+  border:none;
+  box-shadow: none;
+  background: transparent;
+  color: #e60000;
+
+}
+.action:active:focus {
+  outline:0;
+  border:none;
+  box-shadow: none;
+  background: transparent;
+  color: #e60000;
+}
