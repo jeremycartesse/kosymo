@@ -1,15 +1,22 @@
 <div class="container" style="display: flex; justify-content: space-around; width: 17%; border: 1px solid lightgrey; margin-top: 20px;">
     <div>
       <div class="card-background text-center" style="margin-top: 30px;">
-      <%= image_tag "http://lorempixel.com/300/300/city/#{indice+1}", :style => "width:100%;"%>
-      </div>
-        <div class="card-footer" style="margin-top: 10px; margin-bottom: 20px;" >
-    <div style="float:left; position: relative;top:7px; left: 20px;">
-    <%= image_tag "avatar.jpg", class: "avatarcard", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
-    </div>
 
-    <div style="float:middle">
-    <ul class="pictolist">
+        <div class="videohover-background">
+          <video preload="auto" loop="loop" width="100%" onmouseout="this.pause()" onmouseover="this.play()">
+            <source src= "<%= image_path("off#{indice + 1}.mp4")%>" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <div class="card-footer" style="margin-top: 10px; margin-bottom: 20px;" >
+      <div style="float:left; position: relative;top:7px; left: 20px;">
+        <%= image_tag "avatar.jpg", class: "avatarcard", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+
+      </div>
+
+      <div style="float:middle">
+      <ul class="pictolist">
             <li><p style="font-size: 15px;font-weight:bold;">T3 Marseille</p></li>
              <li>12 Avis</li>
         </ul>
@@ -25,7 +32,7 @@
           </div>
            </div>
 
-        </div>
+       </div>
 
       </div>
 
