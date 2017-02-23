@@ -1,5 +1,6 @@
-<h1>Offers#new</h1>
-<p>Find me in app/views/offers/new.html.erb</p>
+<h1 class="text-center" >Adding new offer</h1>
+<br>
+<br>
 <div class="container">
   <div class="row">
     <%= simple_form_for [@offer] do |f| %>
@@ -12,13 +13,16 @@
     <%= f.input :photos, as: :attachinary %>
     <%= f.input :video %>
     <%= f.input :description %>
+    <br>
     <%= f.label :room_number %>
     <%= f.select :room_number, Offer::ROOM_NUMBER %>
     <%= f.label :bedroom_number %>
     <%= f.select :bedroom_number, Offer::BEDROOM_NUMBER %>
     <%= f.label :good_type %>
     <%= f.select :good_type, Offer::GOOD_TYPE %>
-    <ul>
+    <br>
+    <br>
+    <ul class="input_count">
       <li><%= f.input :parking %></li>
       <li><%= f.input :ground %></li>
       <li><%= f.input :lift %></li>
@@ -28,7 +32,12 @@
       <li><%= f.input :balcony %></li>
       <li><%= f.input :terrace %></li>
     </ul>
-    <%= f.submit "add a offer", class: "btn btn-primary" %>
+    <br class="text-center">
+    <%= f.submit "Create", class: "btn btn-primary" %>
     <% end %>
+    <br>
+    <br>
+    <br>
+    <br>
   </div>
 </div>
