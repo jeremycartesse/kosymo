@@ -21,8 +21,12 @@ class OffersController < ApplicationController
 
   def create
     @offer = Offer.new(task_params)
-    @offer.save
-    redirect_to user_offers_path(user_id: current_user)
+    @offer.user_id = current_user.id
+    if @offer.save
+      redirect_to user_offers_path(user_id: current_user)
+    else
+      render :new
+    end
   end
 
   def edit
