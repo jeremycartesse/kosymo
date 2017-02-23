@@ -24,7 +24,7 @@
   position: relative;top:-8px;left: -10px;
   color: #e60000;
   border: none;
-  background: transparent
+  background: transparent;
 }
 .video-container {
 
@@ -84,7 +84,17 @@ font-family: Quicksand;
 }
 
 
-//jeremy add for the dashboard
+.pictolist{
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+}
+
+.avatarcard{
+  width: 50px;
+  border-radius: 50%;
+}
 .media {
   display: flex;
 }
