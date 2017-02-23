@@ -3,10 +3,13 @@
 @import "config/bootstrap_variables";
 
 // External libraries
+@import "components/address_autocomplete";
+@import "jquery-ui";
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+
 
 // Your CSS
 @import "layout/index";
