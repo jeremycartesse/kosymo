@@ -123,3 +123,20 @@ font-family: Quicksand;
 .input_count {
   column-count: 4;
 }
+/* *******   CARD BACKGROUND *********/
+.videohover-background  {
+  background-color: black;
+  line-height: 0;
+}
+.videohover-background video {
+  opacity: 0.6;
+  transition: all 1s ease;
+}
+
+.videohover-background:hover video {
+  transition: all 1s ease;
+  opacity: 1;
+}
+// .videohover-background  img {
+//   max-width: 100%;
+// }
