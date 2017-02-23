@@ -41,8 +41,11 @@ class OffersController < ApplicationController
 
   def destroy
     @offer = Offer.find(params[:id])
-    @offer.destroy
-    redirect_to user_offers_path
+    if @offer.destroy
+      redirect_to user_offers_path(user_id: current_user)
+    else
+      render :new
+    end
   end
 
   private
