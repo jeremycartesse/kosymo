@@ -14,22 +14,25 @@
     <div class="media">
       <div class="media-body">
         <div class="media-section">
-          <h3><%= offer.name %></h3>
+          <h3 style="color: grey; font-family:Heebo; font-weight: thin; font-size: 60px;"><%= offer.name %></h3>
           <% offer.photos.each do |photo| %>
           <%= cl_image_tag photo.fullpath, width: 500, height: 500, crop: :fill %>
           <% end %>
         </div>
         <div class="media-section">
-          <h3>Info</h3>
-          <ul class="input_count">
+          <h3 style="font-family: Quicksand; font-weight: lighter;color:grey;">Info</h3>
+          <ul class="input_count" style="font-family: Quicksand; font-weight: lighter; list-style-type: none;">
             <li><%= offer.description %></li>
-            <li>City: <%= offer.city %></li>
-            <li>Price : <%= offer.price %> euros</li>
-            <li>Surface: <%= offer.surface %> m2</li>
+            <li><span style="color:#e60000;font-family: Quicksand; font-weight: lighter;">City: </span><%= offer.city %></li>
+            <li><span style="color:#e60000;font-family: Quicksand; font-weight: lighter;">Price : </span><%= offer.price %> euros</li>
+            <li><span style="color:#e60000;font-family: Quicksand; font-weight: lighter;">Surface: </span> <%= offer.surface %> m2</li>
           </ul>
+          <div style="float: right!important;padding-top: 10px;"><%= link_to "+ plus de details", offer_path(offer), class: "bouton_nom"%></div>
         </div>
       </div>
     </div>
+    <div style="height:1px;background:#e60000;border-bottom:1px solid color:#e60000;"></div>
   </div>
+
   <% end %>
 </div>
