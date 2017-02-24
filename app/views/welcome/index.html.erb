@@ -26,11 +26,8 @@
 
 <div class="container" style="margin-top: 50px;">
   <div class="row row-centered">
-      <%= render "shared/card"%>
-      <%= render "shared/card" %>
-      <%= render "shared/card" %>
-      <%= render "shared/card" %>
-      <%= render "shared/card" %>
-      <%= render "shared/card" %>
+  <% 4.times do |i|%>
+      <%= render "shared/card" , indice: i%>
+  <%end%>
   </div>
 </div>
