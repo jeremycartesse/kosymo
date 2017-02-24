@@ -18,70 +18,15 @@
 @import "vendor/index";
 
 
-.action {
-  font-family: Quicksand;
-  font-size: 20px;
-  position: relative;top:-8px;left: -10px;
-  color: #e60000;
-  border: none;
-  background: transparent;
-}
-.video-container {
 
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  height: 43vh;
-  min-height: 30vh !important;
-  top: 0%;
-  z-index: 0;
-  left: 0%;
-  .video-background {
-    position: relative;
-    opacity: 0.78;
-    z-index: 0;
-    min-width: 100% !important;
+
+  .videocont {
+     width: 100%;
+     height: 40vh;
+    text-align: center;
+    z-index: 10;
+    overflow: hidden;
   }
-  video {
-    position: relative;
-    // top: 50%;
-    left: 0;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-  }
-}
-
-.action:hover {
-font-family: Quicksand;
-  font-size: 20px;
-  position: relative;top:-8px;
-  color: grey;
-  border: none;
-  background: transparent
-}
-
-.action:focus {
-  outline:0;
-  border:none;
-  background: transparent
-
-}
-.action:active {
-  outline:0;
-  border:none;
-  box-shadow: none;
-  background: transparent;
-  color: #e60000;
-
-}
-.action:active:focus {
-  outline:0;
-  border:none;
-  box-shadow: none;
-  background: transparent;
-  color: #e60000;
-}
 
 
 .pictolist{
@@ -132,10 +77,12 @@ font-family: Quicksand;
   background: transparent
 }
 .bouton_nom:hover {
+  color: grey !important;
 font-family: Quicksand;
+text-decoration: none !important;
   font-size: 20px;
   position: relative;top:-8px;
-  color: grey;
+
   border: none;
   background: transparent
 }
@@ -143,7 +90,8 @@ font-family: Quicksand;
 .bouton_nom:focus {
   outline:0;
   border:none;
-  background: transparent
+  background: transparent;
+  color: #e60000 !important;
 
 }
 .bouton_nom:active {
@@ -151,7 +99,7 @@ font-family: Quicksand;
   border:none;
   box-shadow: none;
   background: transparent;
-  color: #e60000;
+  color: #e60000 !important;
 
 }
 .bouton_nom:active:focus {
@@ -159,12 +107,82 @@ font-family: Quicksand;
   border:none;
   box-shadow: none;
   background: transparent;
-  color: #e60000;
-
+  color: #e60000 !important;
+}
 .input_count {
   column-count: 4;
 
 }
+
+
+.hvr-sweep-to-right {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+.hvr-sweep-to-right:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: transparent;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-sweep-to-right:hover, .hvr-sweep-to-right:focus, .hvr-sweep-to-right:active {
+  color: white;
+}
+.hvr-sweep-to-right:hover:before, .hvr-sweep-to-right:focus:before, .hvr-sweep-to-right:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.hvr-shrink {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.hvr-shrink:hover, .hvr-shrink:focus, .hvr-shrink:active {
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+}
+
+.row-centered {
+    text-align:center !important;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    /* inline-block space fix */
+    margin: 0 auto;
+    }
+
+
 /* *******   CARD BACKGROUND *********/
 .videohover-background  {
   background-color: black;
@@ -182,3 +200,4 @@ font-family: Quicksand;
 // .videohover-background  img {
 //   max-width: 100%;
 // }
+
