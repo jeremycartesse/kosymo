@@ -12,8 +12,9 @@
 <div class="card" style="background-color: #9BBAC9">
   <div class="card-category ">edit </div>
   <div class="card-description">
-    <h2>Welcome to your dashboard</h2>
+    <h2>Bienvenue</h2>
   </div>
+
   <a class="card-link" href="#" ></a>
 </div>
 
@@ -26,7 +27,7 @@
     <div class="media">
       <div class="media-body">
         <div class="media-section">
-          <h3>Pictures</h3>
+          <h3></h3>
           <% offer.photos.each do |photo| %>
           <%= cl_image_tag photo.fullpath, width: 500, height: 500, crop: :fill %>
           <% end %>
@@ -38,28 +39,28 @@
       </div>
       <div class="media-aside">
         <div class="media-section">
-          <h3>information</h3>
-          <h4> City: <%= offer.city %></h4>
-          <h4> Price : <%= offer.price %> euros</h4>
-          <h4> Address: <%= offer.address %></h4>
-          <h4> Post code: <%= offer.zip_code %></h4>
+          <h3>Informations</h3>
+          <h4> Ville: <%= offer.city %></h4>
+          <h4> Prix : <%= offer.price %> euros</h4>
+          <h4> Addresse: <%= offer.address %></h4>
+          <h4> Code postal: <%= offer.zip_code %></h4>
           <h4> Surface: <%= offer.surface %> m2</h4>
-          <h4>Room number: <%= offer.room_number %></h4>
-          <h4>Bedroom offer: <%= offer.bedroom_number %></h4>
+          <h4>Nombre de pièces: <%= offer.room_number %></h4>
+          <h4>Nombre de chambres: <%= offer.bedroom_number %></h4>
           <h4> type: <%= offer.good_type %></h4>
         </div>
         <div class="media-section">
-          <h3>other criteria</h3>
-          <h4>Parking: <%= offer.parking %></h4>
-          <h4>Ground: <%= offer.ground %></h4>
-          <h4>lift: <%= offer.lift %></h4>
+          <h3>Autres critères</h3>
+          <h4>Stationnement: <%= offer.parking %></h4>
+          <h4>Terrain: <%= offer.ground %></h4>
+          <h4>Ascenseur: <%= offer.lift %></h4>
           <h4>Floor: <%= offer.floor %></h4>
-          <h4>Swimming_pool :<%= offer.swimming_pool %></h4>
+          <h4>Piscine:<%= offer.swimming_pool %></h4>
           <h4>Cave: <%= offer.cave %></h4>
-          <h4>Balcony: <%= offer.balcony %></h4>
-          <h4>Terrace<%= offer.terrace %></h4>
+          <h4>Balcon: <%= offer.balcony %></h4>
+          <h4>Terrasse<%= offer.terrace %></h4>
           <%= link_to "Delete", offer_path(offer.id), method: :delete,
-          data: { confirm: "Are you sure?" } , class: "btn btn-primary"%>
+          data: { confirm: "Etes-vous sûr?" } , class: "btn btn-primary"%>
           <%= link_to "Update", edit_offer_path(offer.id), class: "btn btn-primary"%>
         </div>
       </div>

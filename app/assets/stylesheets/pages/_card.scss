@@ -1,9 +1,12 @@
 .card {
-  height: 175px;
+  height: 200px;
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
   background-size: cover !important;
   color: white;
-  position: relative;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('programme1.png');
 }
 .card-user {
   position: absolute;
