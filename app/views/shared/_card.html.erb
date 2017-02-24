@@ -3,7 +3,11 @@
   <div class="text-center" style="display: flex; justify-content: space-around; width: 250px; border: 1px solid lightgrey; margin-top: 20px;">
     <div>
       <div class="card-background">
-        <%= image_tag "http://lorempixel.com/300/300/city", :style => "width:100%;"%>
+         <div class="videohover-background">
+          <video preload="auto" loop="loop" width="100%" onmouseout="this.pause()" onmouseover="this.play()">
+            <source src= "<%= image_path("off#{indice + 1}.mp4")%>" type="video/mp4">
+          </video>
+        </div>
       </div>
       <div class="card-footer" style="margin-top: 10px; margin-bottom: 20px;" >
         <div style="float:left; position: relative;top:6px; left: 10px;">
