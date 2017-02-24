@@ -1,4 +1,13 @@
-
+<ul class= "welcomenu" style="display: flex; justify-content: space-around; margin-bottom: 40px;">
+  <li style="list-style-type: none;"><%= link_to root_path, :style => "text-decoration: none; color:black;" do %>Immobiler<%end%>
+  </li>
+  <li style="list-style-type: none;"><%= link_to root_path, :style => "text-decoration: none; color:black;" do %>Professionnels<%end%>
+  </li>
+  <li style="list-style-type: none;"><%= link_to root_path, :style => "text-decoration: none; color:black;" do %>Déco shops<%end%>
+  </li>
+  <li style="list-style-type: none;"><%= link_to root_path, :style => "text-decoration: none; color:black;" do %>Projets<%end%>
+  </li>
+</ul>
 
 <% content_for(:after_js) do %>
   <%= javascript_tag do %>
@@ -10,5 +19,5 @@
 <% end %>
 
 ######YOUTUBE#######
-<iframe width="560" height="315" src=<% @offer.user.youtube %>  frameborder="0" allowfullscreen> </iframe>
+<iframe width="560" height="315" src="<%=@offer.video.gsub("watch?v=", "embed/")%>"  frameborder="0" allowfullscreen> </iframe>
 
