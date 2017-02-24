@@ -1,37 +1,36 @@
-<div class="col-xs-12 col-sm-4 col-md-3 col-centered">
- <div class= "hvr-shrink">
-  <div class="text-center" style="display: flex; justify-content: space-around; width: 250px; border: 1px solid lightgrey; margin-top: 20px;">
-    <div>
 
-      <div class="card-background">
-         <div class="videohover-background">
-
-          <video preload="auto" loop="loop" width="100%" onmouseout="this.pause()" onmouseover="this.play()">
-            <source src= "<%= image_path("off#{indice + 1}.mp4")%>" type="video/mp4">
-          </video>
+<div class="row row-centered">
+<div class="col-xs-12 col-sm-6 col-md-4 col-centered">
+  <div class= "hvr-shrink">
+    <div class="text-center" style="display: flex; justify-content: space-around; width: 250px; border: 1px solid lightgrey; margin-top: 20px;">
+      <div>
+        <div class="card-background">
+          <div class="videohover-background">
+            <video preload="auto" loop="loop" width="100%" onmouseout="this.pause()" onmouseover="this.play()">
+              <source src= "<%= image_path("off#{indice + 1}.mp4")%>" type="video/mp4">
+            </video>
+          </div>
         </div>
-      </div>
-
-      <div class="card-footer" style="margin-top: 10px; margin-bottom: 20px;" >
-      <div style="float:left; position: relative;top:7px; left: 20px;">
-        <%= image_tag "avatar.jpg", class: "avatarcard", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
-
-      </div>
-
-      <div style="float:middle">
-      <ul class="pictolist">
-            <li><p style="font-size: 15px;font-weight:bold;">T3 Marseille</p></li>
-            <li>12 Avis</li>
-          </ul>
-          <ul class="pictolist">
-            <li style="color: #e60000;"><i class="fa fa-star"></i></li>
-            <li style=" color: #e60000;"><i class="fa fa-star"></i></li>
-            <li style=" color: #e60000;"><i class="fa fa-star"></i></li>
-            <li style=" color: #e60000;"><i class="fa fa-star"></i></li>
-            <li style=" color: #e60000;"><i class="fa fa-star-half-o" aria-hidden="true"></i></li>
-          </ul>
+        <div class="card-footer" style="margin-top: 10px; margin-bottom: 20px;" >
+          <div style="float:left; position: relative;top:7px; left: 20px;">
+            <%= image_tag "avatar.jpg", class: "avatarcard", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+          </div>
+          <div style="float:middle">
+            <ul class="pictolist">
+              <li><p style="font-size: 15px;font-weight:bold;">T3 Marseille</p></li>
+              <li>12 Avis</li>
+            </ul>
+            <ul class="pictolist">
+              <li style="color: #e60000;"><i class="fa fa-star"></i></li>
+              <li style=" color: #e60000;"><i class="fa fa-star"></i></li>
+              <li style=" color: #e60000;"><i class="fa fa-star"></i></li>
+              <li style=" color: #e60000;"><i class="fa fa-star"></i></li>
+              <li style=" color: #e60000;"><i class="fa fa-star-half-o" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
-</div>
+  </div>
+  </div>
