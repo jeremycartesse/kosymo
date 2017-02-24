@@ -2,15 +2,24 @@
  <div class= "hvr-shrink">
   <div class="text-center" style="display: flex; justify-content: space-around; width: 250px; border: 1px solid lightgrey; margin-top: 20px;">
     <div>
-      <div class="card-background">
-        <%= image_tag "http://lorempixel.com/300/300/city", :style => "width:100%;"%>
-      </div>
-      <div class="card-footer" style="margin-top: 10px; margin-bottom: 20px;" >
-        <div style="float:left; position: relative;top:6px; left: 10px;">
-          <%= image_tag "avatar.jpg", class: "avatarcard", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+
+      <div class="card-background text-center" style="margin-top: 30px;">
+
+        <div class="videohover-background">
+          <video preload="auto" loop="loop" width="100%" onmouseout="this.pause()" onmouseover="this.play()">
+            <source src= "<%= image_path("off#{indice + 1}.mp4")%>" type="video/mp4">
+          </video>
         </div>
-        <div style="padding-right: 10px;">
-          <ul class="pictolist">
+      </div>
+
+      <div class="card-footer" style="margin-top: 10px; margin-bottom: 20px;" >
+      <div style="float:left; position: relative;top:7px; left: 20px;">
+        <%= image_tag "avatar.jpg", class: "avatarcard", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+
+      </div>
+
+      <div style="float:middle">
+      <ul class="pictolist">
             <li><p style="font-size: 15px;font-weight:bold;">T3 Marseille</p></li>
             <li>12 Avis</li>
           </ul>
@@ -21,7 +30,6 @@
             <li style=" color: #e60000;"><i class="fa fa-star"></i></li>
             <li style=" color: #e60000;"><i class="fa fa-star-half-o" aria-hidden="true"></i></li>
           </ul>
-        </div>
       </div>
     </div>
   </div>

@@ -114,6 +114,7 @@ text-decoration: none !important;
 
 }
 
+
 .hvr-sweep-to-right {
   display: inline-block;
   vertical-align: middle;
@@ -180,4 +181,23 @@ text-decoration: none !important;
     /* inline-block space fix */
     margin: 0 auto;
     }
+
+
+/* *******   CARD BACKGROUND *********/
+.videohover-background  {
+  background-color: black;
+  line-height: 0;
+}
+.videohover-background video {
+  opacity: 0.5;
+  transition: all 1s ease;
+}
+
+.videohover-background:hover video {
+  transition: all 1s ease;
+  opacity: 1;
+}
+// .videohover-background  img {
+//   max-width: 100%;
+// }
 
