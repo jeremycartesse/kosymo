@@ -21,6 +21,7 @@ gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'autoprefixer-rails'
 gem 'money-rails', '~>1'
+gem 'faker'
 source 'https://rails-assets.org' do
   gem "rails-assets-underscore"
 end
