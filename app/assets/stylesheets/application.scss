@@ -113,7 +113,13 @@ text-decoration: none !important;
   column-count: 4;
 
 }
+.control-label{
+    font-size: 30px;
+}
+.control-label abbr {
+  display:none;
 
+}
 
 .hvr-sweep-to-right {
   display: inline-block;
@@ -201,4 +207,11 @@ text-decoration: none !important;
 // .videohover-background  img {
 //   max-width: 100%;
 // }
-
+input.form-control {
+  outline: none;
+  border-bottom: 2px solid #e60000;
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style: none;
+  box-shadow: none;
+}
