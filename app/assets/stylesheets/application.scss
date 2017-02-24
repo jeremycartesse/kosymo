@@ -47,8 +47,12 @@
   flex: 1 1 auto;
   padding: 20px;
 }
-.media-body img {
+.offer-research-big-picture {
   width: 100%;
+}
+
+.media-body_re img {
+  //width: 100%;
 }
 .media-aside {
   flex: 0 0 400px;
@@ -59,6 +63,11 @@
 }
 .media-section {
   margin: 40px auto;
+
+}
+
+.media-center {
+  text-align: center;
 }
 .media-section:first-child {
   margin-top: 0;
