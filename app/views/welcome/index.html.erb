@@ -19,15 +19,19 @@
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);">
-    <source src= "<%= image_path("home_web.mp4")%>" type="video/mp4" >
+    <source src= "<%= image_path('home_web.mp4')%>" type="video/mp4" >
   </video>
 </div>
 
 
-<div class="container" style="margin-top: 50px;">
-  <div class="row row-centered">
+<div class="container" style="margin-top: 50px; float: middle; ">
+<div class="row">
   <% 4.times do |i|%>
+      <div class="col-xs-12 col-sm-6 col-md-4">
       <%= render "shared/card" , indice: i%>
+      </div>
+
   <%end%>
-  </div>
+</div>
+</div>
 </div>
