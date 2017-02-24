@@ -1,15 +1,22 @@
+
+<p class="text-left" style=" padding-left: 5%;font-family: Heebo; font-weight: thin!important;font-size: 70px;color: #e60000; z-index: 10;">Dashboard</p>
+
+<div style="height:2px;background:#e60000;border-bottom:3px solid color:#e60000; position: relative;top:-39px;"></div>
+
+
+
 <ul class= "welcomenu" style="display: flex; justify-content: space-around; margin-bottom: 40px;">
-  <li style="list-style-type: none;"><%= link_to new_offer_path, :style => "text-decoration: none; color:black;" do %>Créer une annonce<%end%>
+  <li style="list-style-type: none;"><%= link_to new_offer_path, class: "hvr-shrink",:style => "text-decoration: none; color:black;" do %>Créer une annonce<%end%>
   </li>
-  <li style="list-style-type: none;"><%= link_to root_path, :style => "text-decoration: none; color:black;" do %>Mes annonces<%end%>
+  <li style="list-style-type: none;"><%= link_to root_path, class: "hvr-shrink",:style => "text-decoration: none; color:black;" do %>Mes annonces<%end%>
   </li>
-  <li style="list-style-type: none;"><%= link_to root_path, :style => "text-decoration: none; color:black;" do %>Boîte de réception<%end%>
+  <li style="list-style-type: none;"><%= link_to root_path, class: "hvr-shrink",:style => "text-decoration: none; color:black;" do %>Boîte de réception<%end%>
   </li>
-  <li style="list-style-type: none;"><%= link_to root_path, :style => "text-decoration: none; color:black;" do %>Projets<%end%>
+  <li style="list-style-type: none;"><%= link_to root_path, class: "hvr-shrink",:style => "text-decoration: none; color:black;" do %>Projets<%end%>
   </li>
 </ul>
 <!-- il faut designer la partie bleue -->
-<div class="card" style="background-color: #9BBAC9">
+<div class="card" style="background-color: lightgrey">
   <div class="card-category ">edit </div>
   <div class="card-description">
     <h2>Bienvenue</h2>
@@ -21,12 +28,12 @@
 <% @offers.each do |offer| %>
 <div class="container" style>
   <div class="row">
-    <div class="text-center">
-      <h3> <%= offer.name %></h3>
+    <div class="text-left">
+      <h3 style="color: grey; font-family:Heebo; font-weight: thin; font-size: 60px;"> <%= offer.name %></h3>
     </div>
     <div class="media">
       <div class="media-body">
-        <div class="media-section">
+        <div class="media-section" style="position: relative; top: -40px; left: -5%;">
           <h3></h3>
           <% offer.photos.each do |photo| %>
           <%= cl_image_tag photo.fullpath, width: 500, height: 500, crop: :fill %>
@@ -38,30 +45,39 @@
         </div>
       </div>
       <div class="media-aside">
+      <div style="margin:auto; display: flex; justify-content:space-around ">
+          <p><i class="fa fa-trash" aria-hidden="true" style="color:#e60000; position:relative;left: -15px; top: -10px; "></i> <%= link_to "Delete", offer_path(offer.id), method: :delete,
+          data: { confirm: "Etes-vous sûr?" } , class: "bouton_nom"%></p>
+          <p><i class="fa fa-pencil" aria-hidden="true" style="color:#e60000; position:relative;left: -15px; top: -10px; "></i><%= link_to "Update", edit_offer_path(offer.id), class: "bouton_nom"%></p>
+          </div>
         <div class="media-section">
-          <h3>Informations</h3>
-          <h4> Ville: <%= offer.city %></h4>
-          <h4> Prix : <%= offer.price %> euros</h4>
-          <h4> Addresse: <%= offer.address %></h4>
-          <h4> Code postal: <%= offer.zip_code %></h4>
-          <h4> Surface: <%= offer.surface %> m2</h4>
-          <h4>Nombre de pièces: <%= offer.room_number %></h4>
-          <h4>Nombre de chambres: <%= offer.bedroom_number %></h4>
-          <h4> type: <%= offer.good_type %></h4>
+          <h3 class="text-center" style="color:#e60000; font-family: Quicksand; font-weight: lighter;">Informations</h3>
+          <div style="height:2px;background:#e60000;border-bottom:3px solid color:#e60000;"></div>
+
+          <h4> <span style="color:#e60000;font-family: Quicksand; font-weight: lighter;">Ville:  </span><%= offer.city %></h4>
+          <h4> <span style="color:#e60000;font-family: Quicksand; font-weight: lighter;">Prix :  </span><%= offer.price %> euros</h4>
+          <h4> <span style="color:#e60000;font-family: Quicksand; font-weight: lighter;">Addresse:  </span><%= offer.address %></h4>
+          <h4> <span style="color:#e60000;font-family: Quicksand; font-weight: lighter;">Code postal:  </span><%= offer.zip_code %></h4>
+          <h4> <span style="color:#e60000;font-family: Quicksand; font-weight: lighter;">Surface:  </span><%= offer.surface %> m2</h4>
+          <h4><span style="color:#e60000;font-family: Quicksand; font-weight: lighter;">Nombre de pièces:  </span><%= offer.room_number %></h4>
+          <h4><span style="color:#e60000;font-family: Quicksand; font-weight: lighter;">Nombre de chambres: </span><%= offer.bedroom_number %></h4>
+          <h4> <span style="color:#e60000;font-family: Quicksand; font-weight: lighter;">type: </span><%= offer.good_type %></h4>
         </div>
         <div class="media-section">
-          <h3>Autres critères</h3>
-          <h4>Stationnement: <%= offer.parking = "true" ? "oui" : "non" %></h4>
-          <h4>Terrain: <%= offer.ground %></h4>
-          <h4>Ascenseur: <%= offer.lift %></h4>
-          <h4>Floor: <%= offer.floor %></h4>
-          <h4>Piscine:<%= offer.swimming_pool %></h4>
-          <h4>Cave: <%= offer.cave %></h4>
-          <h4>Balcon: <%= offer.balcony %></h4>
-          <h4>Terrasse<%= offer.terrace %></h4>
-          <%= link_to "Delete", offer_path(offer.id), method: :delete,
-          data: { confirm: "Etes-vous sûr?" } , class: "btn btn-primary"%>
-          <%= link_to "Update", edit_offer_path(offer.id), class: "btn btn-primary"%>
+
+          <h3 class="text-center" style="color:#e60000;font-family: Quicksand; font-weight: lighter;"> Autres critères</h3>
+          <div style="height:2px;background:#e60000;border-bottom:3px solid color:#e60000;"></div>
+
+          <h4><span style="color:#e60000;font-family: Quicksand; font-weight: lighter;">Stationnement: </span> <%= offer.parking = "true" ? "oui" : "non" %></h4>
+          <h4><span style="color:#e60000;font-family: Quicksand; font-weight: lighter;">Terrain: </span> <%= offer.ground = "true" ? "oui" : "non" %></h4>
+          <h4><span style="color:#e60000;font-family: Quicksand; font-weight: lighter;">Ascenseur: </span> <%= offer.lift = "true" ? "oui" : "non" %></h4>
+          <h4><span style="color:#e60000;font-family: Quicksand; font-weight: lighter;">Floor: </span> <%= offer.floor = "true" ? "oui" : "non" %></h4>
+          <h4><span style="color:#e60000;font-family: Quicksand; font-weight: lighter;">Piscine: </span><%= offer.swimming_pool = "true" ? "oui" : "non" %></h4>
+          <h4><span style="color:#e60000;font-family: Quicksand; font-weight: lighter;">Cave: </span> <%= offer.cave = "true" ? "oui" : "non" %></h4>
+          <h4><span style="color:#e60000;font-family: Quicksand; font-weight: lighter;">Balcon: </span> <%= offer.balcony = "true" ? "oui" : "non" %></h4>
+          <h4><span style="color:#e60000;font-family: Quicksand; font-weight: lighter;">Terrasse: </span><%= offer.terrace = "true" ? "oui" : "non" %></h4>
+
+
         </div>
       </div>
     </div>

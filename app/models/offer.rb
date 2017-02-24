@@ -5,6 +5,7 @@ class Offer < ApplicationRecord
 
   ROOM_NUMBER = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
   BEDROOM_NUMBER = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  CITY_EX = ["", "Paris", "Nice", "Cannes", "Monaco", "Montcuq", "Marseille"]
   GOOD_TYPE = ["Appartment", "Floor", "House", "Building", "Commercial premises", "Parking"]
   belongs_to :user
 

@@ -17,16 +17,51 @@
           </div>
           <div style="float:middle">
             <ul class="pictolist">
-              <li><p style="font-size: 15px;font-weight:bold;">T3 Marseille</p></li>
-              <li>12 Avis</li>
+              <li><p style="font-size: 15px;font-weight:bold;">T<%=rand(1..6)%> <%=Offer::CITY_EX["#{indice + 1}".to_i]%></p></li>
+              <li><%=rand(2..15)%> Avis</li>
             </ul>
-            <ul class="pictolist">
-              <li style="color: #e60000;"><i class="fa fa-star"></i></li>
-              <li style=" color: #e60000;"><i class="fa fa-star"></i></li>
-              <li style=" color: #e60000;"><i class="fa fa-star"></i></li>
-              <li style=" color: #e60000;"><i class="fa fa-star"></i></li>
-              <li style=" color: #e60000;"><i class="fa fa-star-half-o" aria-hidden="true"></i></li>
-            </ul>
+            <% rating_ex = rand(100) %>
+            <% if rating_ex < 20 %>
+              <ul class="pictolist">
+                <li style="color: #e60000;"><i class="fa fa-star"></i></li>
+                <li style=" color: #e60000;"><i class="fa fa-star"></i></li>
+                <li style=" color: #e60000;"><i class="fa fa-star"></i></li>
+                <li style=" color: #e60000;"><i class="fa fa-star"></i></li>
+                <li style=" color: #e60000;"><i class="fa fa-star-half-o" aria-hidden="true"></i></li>
+              </ul>
+            <% elsif rating_ex < 40 %>
+              <ul class="pictolist">
+                <li style="color: #e60000;"><i class="fa fa-star"></i></li>
+                <li style=" color: #e60000;"><i class="fa fa-star"></i></li>
+                <li style=" color: #e60000;"><i class="fa fa-star"></i></li>
+                <li style=" color: #e60000;"><i class="fa fa-star-o"></i>
+                <li style=" color: #e60000;"><i class="fa fa-star-o"></i></li>
+              </ul>
+            <% elsif rating_ex < 60 %>
+              <ul class="pictolist">
+                <li style="color: #e60000;"><i class="fa fa-star"></i></li>
+                <li style=" color: #e60000;"><i class="fa fa-star"></i></li>
+                <li style=" color: #e60000;"><i class="fa fa-star"></i></li>
+                <li style=" color: #e60000;"><i class="fa fa-star-half-o"></i>
+                <li style=" color: #e60000;"><i class="fa fa-star-o"></i></li></li>
+              </ul>
+            <% elsif rating_ex < 80 %>
+              <ul class="pictolist">
+                <li style="color: #e60000;"><i class="fa fa-star"></i></li>
+                <li style=" color: #e60000;"><i class="fa fa-star"></i></li>
+                <li style=" color: #e60000;"><i class="fa fa-star-o"></i></li>
+                <li style=" color: #e60000;"><i class="fa fa-star-o"></i></li>
+                <li style=" color: #e60000;"><i class="fa fa-star-o" aria-hidden="true"></i></li>
+              </ul>
+            <% elsif rating_ex < 100 %>
+              <ul class="pictolist">
+                <li style="color: #e60000;"><i class="fa fa-star"></i></li>
+                <li style=" color: #e60000;"><i class="fa fa-star-half-o"></i></li>
+                <li style=" color: #e60000;"><i class="fa fa-star-o"></i></li>
+                <li style=" color: #e60000;"><i class="fa fa-star-o"></i></li>
+                <li style=" color: #e60000;"><i class="fa fa-star-o" aria-hidden="true"></i></li></li>
+              </ul>
+            <% end %>
           </div>
         </div>
       </div>
