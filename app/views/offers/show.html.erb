@@ -27,9 +27,11 @@ alert('Flat coordinates are ' + coord.lat + ', ' + coord.lng);
     <div class="text-left">
       <h3 style="color: grey; font-family:Heebo; font-weight: thin; font-size: 60px;"> <%= @offer.name %></h3>
     </div>
+    <br>
+    <br>
     <div class="media">
       <div class="media-body">
-        <div class="media-section" style="position: relative; top: -40px; left: -5%;">
+        <div class="media-section media-center" style="position: relative; top: -40px; left: -5%;">
           <h3></h3>
           <iframe width="560" height="315" src="<%=@offer.video.gsub("watch?v=", "embed/")%>"  frameborder="0" allowfullscreen> </iframe>
           <% @offer.photos.each do |photo| %>

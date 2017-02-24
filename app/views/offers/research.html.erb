@@ -16,7 +16,7 @@
         <div class="media-section">
           <h3 style="color: grey; font-family:Heebo; font-weight: thin; font-size: 60px;"><%= offer.name %></h3>
           <% offer.photos.each do |photo| %>
-          <%= cl_image_tag photo.fullpath, width: 500, height: 500, crop: :fill %>
+          <%= cl_image_tag photo.fullpath, crop: :fill, class: "offer-research-big-picture" %>
           <% end %>
         </div>
         <div class="media-section">
@@ -29,8 +29,6 @@
           </ul>
 
           <div style="float: right!important;padding-top: 10px;"><%= link_to "+ plus de details", offer_path(offer), class: "bouton_nom"%></div>
-
-          <%= link_to "plus de details", offer_path(offer), class: "btn btn-primary"%>
 
         </div>
       </div>
