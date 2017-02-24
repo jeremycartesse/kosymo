@@ -13,6 +13,10 @@ class OffersController < ApplicationController
   def show
     @offer = Offer.find(params[:id])
     @offer_coordinates = { lat: @offer.latitude, lng: @offer.longitude }
+    @hash = Gmaps4rails.build_markers(@offer) do |offer, marker|
+              marker.lat offer.latitude
+              marker.lng offer.longitude
+            end
   end
 
   def new
