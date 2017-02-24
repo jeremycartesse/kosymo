@@ -12,10 +12,11 @@
 
 
 
-    <form action="" class="navbar-wagon-search" style="position: relative; top: 50px; left:-250px;">
+    <form action="" class="navbar-wagon-search" style="float: left; position: absolute; top: 8%; right: 25%;">
       <input type="text" class="navbar-wagon-search-input" placeholder="">
-      <button type="submit" class="search-btn" style="position:absolute;left: 180px;">
-        <p class="search" style="font-family: Quicksand; font-size: 30px;position: relative;top:-8px; color: #e60000;">Rechercher</p>
+
+       <button type="submit" class="search-btn" style="position:absolute;left: 180px;">
+        <p class="search" style="font-family: Quicksand;"><%= link_to'Rechercher', research_path, class: "bouton_nom hvr-sweep-to-right", :style => " font-size: 30px;position: relative;top:-10px; color: #e60000;" %></p>
 
       </button>
     </form>
@@ -28,7 +29,7 @@
       <%= link_to "#", class: "navbar-wagon-item navbar-wagon-link" do %>
         <div class="badge-container">
           <i class="fa fa-envelope-o"></i>
-          <div class="badge badge-blue">0</div>
+          <div class="badge badge-red" >0</div>
         </div>
       <% end %>
 
@@ -38,7 +39,7 @@
         <% if [avatar: current_user].nil? %>
           <%= image_tag "http://placehold.it/30x30", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
           <%else%>
-          <%= image_tag "avatar.jpg", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+          <%= image_tag "avatar.jpg", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown", :style => "width: 30px;"  %>
           <%end%>
 
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
