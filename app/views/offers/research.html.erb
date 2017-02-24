@@ -27,7 +27,11 @@
             <li><span style="color:#e60000;font-family: Quicksand; font-weight: lighter;">Price : </span><%= offer.price %> euros</li>
             <li><span style="color:#e60000;font-family: Quicksand; font-weight: lighter;">Surface: </span> <%= offer.surface %> m2</li>
           </ul>
+
           <div style="float: right!important;padding-top: 10px;"><%= link_to "+ plus de details", offer_path(offer), class: "bouton_nom"%></div>
+
+          <%= link_to "plus de details", offer_path(offer), class: "btn btn-primary"%>
+
         </div>
       </div>
     </div>
